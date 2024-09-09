@@ -1,0 +1,2 @@
+CREATE TYPE code_purpose AS ENUM ('email_verification', 'password_reset');
+CREATE TYPE asset_type AS ENUM ('face_shape', 'eye_color', 'hair_color', 'hairstyle', 'tatoo', 'scar', 'headwear', 'jacket', 'pants', 'boots', 'cloak', 'weapon', 'shield', 'backpack', 'decorations', 'ears', 'horns', 'nose', 'mouth');
