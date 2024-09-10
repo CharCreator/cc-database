@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS users;
 CREATE TABLE IF NOT EXISTS users
 (
     id              SERIAL           PRIMARY KEY,
@@ -13,7 +12,6 @@ CREATE TABLE IF NOT EXISTS users
     UNIQUE (email)
 );
 
-DROP TABLE IF EXISTS sessions;
 CREATE TABLE IF NOT EXISTS sessions
 (
     id              SERIAL           PRIMARY KEY,
@@ -25,7 +23,6 @@ CREATE TABLE IF NOT EXISTS sessions
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
 );
 
-DROP TABLE IF EXISTS assets;
 CREATE TABLE IF NOT EXISTS assets
 (
     id              SERIAL           PRIMARY KEY,
@@ -39,7 +36,6 @@ CREATE TABLE IF NOT EXISTS assets
     UNIQUE (file_name)
 );
 
-DROP TABLE IF EXISTS codes;
 CREATE TABLE IF NOT EXISTS codes
 (
     id              SERIAL           PRIMARY KEY,
@@ -54,7 +50,6 @@ CREATE TABLE IF NOT EXISTS codes
     UNIQUE (code)
 );
 
-DROP TABLE IF EXISTS used_assets;
 CREATE TABLE IF NOT EXISTS used_assets
 (
     id              SERIAL          PRIMARY KEY,
@@ -66,7 +61,6 @@ CREATE TABLE IF NOT EXISTS used_assets
     FOREIGN KEY (asset_id) REFERENCES assets (id) ON DELETE CASCADE
 );
 
-DROP TABLE IF EXISTS saved_characters;
 CREATE TABLE IF NOT EXISTS saved_characters
 (
     id              SERIAL          PRIMARY KEY,
@@ -77,7 +71,6 @@ CREATE TABLE IF NOT EXISTS saved_characters
     UNIQUE (user_id, name)
 );
 
-DROP TABLE IF EXISTS saved_character_assets;
 CREATE TABLE IF NOT EXISTS saved_character_assets
 (
     id                 SERIAL       PRIMARY KEY,
