@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS assets
 (
     id            SERIAL PRIMARY KEY,
     file_name     uuid       NOT NULL,
+    cover         JSONB NOT NULL,
     created_at    TIMESTAMP      NOT NULL     DEFAULT CURRENT_TIMESTAMP,
     modified_at   TIMESTAMP      NOT NULL     DEFAULT CURRENT_TIMESTAMP,
     asset_type    asset_type NOT NULL,
