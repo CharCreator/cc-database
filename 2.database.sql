@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS assets
     asset_type    asset_type NOT NULL,
     colorable     BOOLEAN      NOT NULL       DEFAULT FALSE,
     default_properties JSONB NOT NULL ,
+    character_sex INT NOT NULL,
 
     UNIQUE (file_name)
 );
