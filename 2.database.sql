@@ -25,15 +25,15 @@ CREATE TABLE IF NOT EXISTS sessions
 
 CREATE TABLE IF NOT EXISTS assets
 (
-    id            SERIAL PRIMARY KEY,
-    file_name     uuid       NOT NULL,
-    cover         JSONB NOT NULL,
-    created_at    TIMESTAMP      NOT NULL     DEFAULT CURRENT_TIMESTAMP,
-    modified_at   TIMESTAMP      NOT NULL     DEFAULT CURRENT_TIMESTAMP,
-    asset_type    asset_type NOT NULL,
-    colorable     BOOLEAN      NOT NULL       DEFAULT FALSE,
-    default_properties JSONB NOT NULL ,
-    character_sex INT NOT NULL,
+    id                 SERIAL       PRIMARY KEY,
+    file_name          UUID         NOT NULL,
+    image_data         BYTEA        NOT NULL,
+    created_at         TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    modified_at        TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    asset_type         asset_type   NOT NULL,
+    colorable          BOOLEAN      NOT NULL DEFAULT FALSE,
+    default_properties JSONB        NOT NULL,
+    character_sex      INT          NOT NULL,
 
     UNIQUE (file_name)
 );
